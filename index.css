@@ -1,0 +1,6 @@
+label[data-required]::after {
+    content: '*';
+    color: #ef4444;
+    margin-left: 5px;
+  }
+  

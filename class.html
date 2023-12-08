@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Class Student</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="flex p-4">
+      <form id="student-form" class="p-4 w-[400px] flex flex-col gap-y-2">
+            <div class="flex flex-col gap-2">
+                <label class="font-bold" for="name"
+                    >Họ và tên <span class="text-red-500">*</span></label
+                >
+                <input
+                    id="name"
+                    placeholder="Họ và tên"
+                    class="
+                    rounded
+                    border border-gray-300
+                    px-2
+                    py-1
+                    hover:border-blue-400
+                    focus:border-blue-500
+                    outline-none
+                    "
+                    type="text"
+                    name="name"
+                />
+                <p class="text-red-500 text-sm invisible">
+                    Họ và tên không được để trống
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label data-required class="font-bold" for="birthday"
+                    >Ngày sinh</label
+                >
+                <input id="birthday" placeholder=dd/mm/yyyy" class=" rounded border
+                    border-gray-300 px-2 py-1 hover:border-blue-400 focus:border-blue-500
+                    outline-none "
+                    type="text" 
+                    name="birthday"
+                        />
+                <p class="text-red-500 text-sm invisible">
+                    Ngày sinh không được để trống
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label data-required class="font-bold" for="sex"
+                >Giới Tính</label>
+                <select  id="sex" class="border h-[34px] rounded rounded-md hover:border-blue-400 focus:border-blue-500 outline-none px-2 py-1" name="sex">
+                    <option value="">Giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nu">Nữ</option>
+                    
+                </select>
+                <p class="text-red-500 text-sm invisible">
+                Giới tính không được để trống
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label data-required class="font-bold" for="point"
+                >Điểm Trung Bình</label
+                >
+                <input id="point" class=" rounded border
+                    border-gray-300 px-2 py-1 hover:border-blue-400 focus:border-blue-500
+                    outline-none "
+                    type="text" 
+                    name="point"
+                    />
+                <p class="text-red-500 text-sm invisible">
+                Điểm trung bình không được để trống
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label data-required class="font-bold" for="note"
+                >Ghi Chú</label
+                >
+                <textarea id="note"  class="rounded border
+                border-gray-300 hover:border-blue-400 focus:border-blue-500
+                outline-none" 
+                rows="5" cols="10" >
+                </textarea>
+                <p class="text-red-500 text-sm invisible">
+                Điểm trung bình không được để trống
+                </p>
+            </div>
+            <button
+                class="rounded bg-blue-500 px-2 py-1 text-white w-[150px] self-center"
+                type="submit">
+                Thêm học sinh
+            </button>
+      </form>
+      <div class="bg-gray-300 flex-1 h-200"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
